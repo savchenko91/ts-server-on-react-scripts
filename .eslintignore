@@ -1,0 +1,6 @@
+webpack.config.js
+migrations
+dist
+.eslintrc.js
+.prettierrc.js
+scripts
