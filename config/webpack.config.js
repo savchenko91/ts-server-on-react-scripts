@@ -16,8 +16,15 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-
 const appPackageJson = require(paths.appPackageJson);
+const resolveTsconfigPathsToAlias = require('./resolveTsconfigPathsToWebpackAlias.js');
+
+const tsconfigPathAliases = resolveTsconfigPathsToAlias({
+  tsconfigPath: '../tsconfig.json', // Using custom path
+  projectRoot: path.join(__dirname, '../'), // Using custom path
+ })
+
+console.log(tsconfigPathAliases);
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -88,6 +95,7 @@ module.exports = function(webpackEnv) {
         .filter(ext => useTypeScript || !ext.includes('ts')),
       alias: {
         ...(modules.webpackAliases || {}),
+        ...tsconfigPathAliases,
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
