@@ -4,3 +4,4 @@ dist
 .eslintrc.js
 .prettierrc.js
 scripts
+config

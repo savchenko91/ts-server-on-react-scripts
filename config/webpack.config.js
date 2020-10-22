@@ -55,7 +55,7 @@ module.exports = function(webpackEnv) {
       pathinfo: isEnvDevelopment,
       // There will be one main bundle, and one file per asynchronous chunk.
       // In development, it does not produce real files.
-      filename: 'server.js'
+      filename: paths.buildFile,
     },
     optimization: {
       minimize: false,

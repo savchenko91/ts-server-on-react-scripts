@@ -5,6 +5,7 @@ let subprocess = null
 const address = require('address')
 const fs = require('fs')
 const path = require('path')
+const paths = require('../config/paths')
 const url = require('url')
 const chalk = require('chalk')
 const detect = require('detect-port-alt')
@@ -225,7 +226,7 @@ function createCompiler({ appName, config, devSocket, urls, useYarn, useTypeScri
     if (subprocess) subprocess.kill()
 
     setTimeout(() => {
-      subprocess = exec(`PORT_SERVER=3001 node build/server.js`, {
+      subprocess = exec(`node ${paths.appBuild}/${paths.buildFile}`, {
         stdio: 'inherit'
       })
 

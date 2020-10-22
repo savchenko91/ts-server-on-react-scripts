@@ -13,7 +13,7 @@ app.use(async (ctx) => {
 })
 
 // eslint-disable-next-line no-console
-console.log('A test message on start')
+console.log(process.env.PORT_SERVER)
 
 // eslint-disable-next-line no-console
 app.listen(process.env.PORT_SERVER, () => console.log('server started'))
