@@ -1,5 +1,4 @@
 import Koa from 'koa'
-import test from '@/index/redux/store'
 
 if (!process.env.PORT_SERVER) {
   throw Error(`env variable PORT_SERVER is not defined!`)
