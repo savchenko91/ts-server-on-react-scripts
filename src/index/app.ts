@@ -1,6 +1,12 @@
 import Koa from 'koa'
 
+import bodyParser from 'koa-bodyparser'
+
+import cors from '@koa/cors'
+
 import db from './db'
+
+import jwt from './middleware/jwt'
 
 if (!process.env.PORT_SERVER) {
   throw Error(`env variable PORT_SERVER is not defined!`)
@@ -9,6 +15,12 @@ if (!process.env.PORT_SERVER) {
 db.authenticate()
 
 const app = new Koa()
+
+app.use(bodyParser())
+
+app.use(cors())
+
+app.use(jwt())
 
 app.use(async (ctx) => {
   // eslint-disable-next-line no-console
