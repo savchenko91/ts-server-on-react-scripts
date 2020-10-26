@@ -23,7 +23,7 @@ export default (): Koa.Middleware => {
     try {
       ctx.jwt.user = jwt.verify(token, process.env.JWT_SECRET || 'secret')
     } catch (e) {
-      throw Error(e)
+      // throw Error(e)
     }
 
     ctx.jwt.protect = (): void | never => {

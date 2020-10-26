@@ -6,6 +6,8 @@ import cors from '@koa/cors'
 
 import db from './db'
 
+import router from './route'
+
 import jwt from './middleware/jwt'
 
 if (!process.env.PORT_SERVER) {
@@ -22,11 +24,8 @@ app.use(cors())
 
 app.use(jwt())
 
-app.use(async (ctx) => {
-  // eslint-disable-next-line no-console
-  console.log('A test message on request')
-  ctx.body = 'Hello World'
-})
+app.use(router.routes())
+app.use(router.allowedMethods())
 
 // eslint-disable-next-line no-console
 // console.log(process.env.DB_NAME)
