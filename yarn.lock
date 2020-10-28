@@ -1321,6 +1321,16 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bcryptjs@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@types/bcryptjs/-/bcryptjs-2.4.2.tgz#e3530eac9dd136bfdfb0e43df2c4c5ce1f77dfae"
+  integrity sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==
+
+"@types/bluebird@^3.5.32":
+  version "3.5.32"
+  resolved "https://registry.yarnpkg.com/@types/bluebird/-/bluebird-3.5.32.tgz#381e7b59e39f010d20bbf7e044e48f5caf1ab620"
+  integrity sha512-dIOxFfI0C+jz89g6lQ+TqhGgPQ0MxSnh/E4xuC0blhFtyW269+mPG5QeLgbdwst/LvdP8o1y0o/Gz5EHXLec/g==
+
 "@types/body-parser@*":
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.0.tgz#0685b3c47eb3006ffed117cdd55164b61f80538f"
@@ -1491,10 +1501,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.2.tgz#ace1880c03594cc3e80206d96847157d8e7fa349"
   integrity sha512-bnoqK579sAYrQbp73wwglccjJ4sfRdKU7WNEZ5FW4K2U6Kc0/eZ5kvXG0JKsEKFB50zrFmfFt52/cvBbZa7eXg==
 
-"@types/node@^12.0.0":
-  version "12.12.68"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.68.tgz#dd5acf4a52a458ff1d9ef4fd66406fba0afbbb33"
-  integrity sha512-3RW2s24ewB7F9dAHvgb9FRvNHn6nO9IK6Eaknbz7HTOe2a5GVne5XbUh5+YA+kcCn67glyHhClUUdFP73LWrgQ==
+"@types/node@^14.14.5":
+  version "14.14.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.5.tgz#e92d3b8f76583efa26c1a63a21c9d3c1143daa29"
+  integrity sha512-H5Wn24s/ZOukBmDn03nnGTp18A60ny9AmCwnEcgJiTgSGsCO7k+NWP7zjCCbhlcnVCoI+co52dUAt9GMhOSULw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1523,6 +1533,11 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+
+"@types/validator@^13.1.0":
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.1.0.tgz#3d776127dbce7dd31fc06f86d3428b072e631eba"
+  integrity sha512-gHUHI6pJaANIO2r6WcbT7+WMgbL9GZooR4tWpuBOETpDIqFNxwaJluE+6rj6VGYe8k6OkfhbHz2Fkm8kl06Igw==
 
 "@types/webpack-env@^1.15.3":
   version "1.15.3"
@@ -2352,6 +2367,11 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+bcryptjs@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
+  integrity sha1-mrVie5PmBiH/fNrF2pczAn3x0Ms=
+
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
@@ -2374,7 +2394,7 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-bluebird@^3.5.5:
+bluebird@^3.5.0, bluebird@^3.5.5:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -2802,6 +2822,14 @@ clone-response@^1.0.2:
   integrity sha1-0dyXOSAxTfZ/vrlCI7TuNQI56Ws=
   dependencies:
     mimic-response "^1.0.0"
+
+cls-bluebird@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/cls-bluebird/-/cls-bluebird-2.1.0.tgz#37ef1e080a8ffb55c2f4164f536f1919e7968aee"
+  integrity sha1-N+8eCAqP+1XC9BZPU28ZGeeWiu4=
+  dependencies:
+    is-bluebird "^1.0.2"
+    shimmer "^1.1.0"
 
 clsx@^1.1.1:
   version "1.1.1"
@@ -4311,6 +4339,18 @@ glob-to-regexp@^0.3.0:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz#8c5a1494d2066c570cc3bfe4496175acc4d502ab"
   integrity sha1-jFoUlNIGbFcMw7/kSWF1rMTVAqs=
 
+glob@7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
+  integrity sha512-MJTUg1kjuLeQCJ+ccE4Vpa6kKVXkPYJ2mOCQyUuKLcLQsdrMCpBPUi8qVE6+YuaJkozeA9NusTAw3hLr8Xe5EQ==
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
 glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
@@ -4784,6 +4824,11 @@ is-binary-path@~2.1.0:
   integrity sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==
   dependencies:
     binary-extensions "^2.0.0"
+
+is-bluebird@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-bluebird/-/is-bluebird-1.0.2.tgz#096439060f4aa411abee19143a84d6a55346d6e2"
+  integrity sha1-CWQ5Bg9KpBGr7hkUOoTWpVNG1uI=
 
 is-buffer@^1.1.5:
   version "1.1.6"
@@ -6152,14 +6197,14 @@ mkdirp@^0.5.1, mkdirp@^0.5.3:
   dependencies:
     minimist "^1.2.5"
 
-moment-timezone@^0.5.31:
+moment-timezone@^0.5.21:
   version "0.5.31"
   resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.31.tgz#9c40d8c5026f0c7ab46eda3d63e49c155148de05"
   integrity sha512-+GgHNg8xRhMXfEbv81iDtrVeTcWt0kWmTEY1XQK14dICTXnWJnT0dxdlPspwqF3keKMVPXwayEsk1DI0AA/jdA==
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.26.0:
+"moment@>= 2.9.0", moment@^2.24.0:
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
@@ -7270,6 +7315,11 @@ recursive-readdir@2.2.2:
   dependencies:
     minimatch "3.0.4"
 
+reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
+
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.2.0.tgz#e5de7111d655e7ba60c057dbe9ff37c87e65cdec"
@@ -7643,29 +7693,38 @@ semver@^7.2.1, semver@^7.3.2:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.2.tgz#604962b052b81ed0786aae84389ffba70ffd3938"
   integrity sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==
 
-sequelize-pool@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/sequelize-pool/-/sequelize-pool-6.1.0.tgz#caaa0c1e324d3c2c3a399fed2c7998970925d668"
-  integrity sha512-4YwEw3ZgK/tY/so+GfnSgXkdwIJJ1I32uZJztIEgZeAO6HMgj64OzySbWLgxj+tXhZCJnzRfkY9gINw8Ft8ZMg==
+sequelize-pool@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/sequelize-pool/-/sequelize-pool-2.3.0.tgz#64f1fe8744228172c474f530604b6133be64993d"
+  integrity sha512-Ibz08vnXvkZ8LJTiUOxRcj1Ckdn7qafNZ2t59jYHMX1VIebTAOYefWdRYFt6z6+hy52WGthAHAoLc9hvk3onqA==
 
-sequelize@^6.3.5:
-  version "6.3.5"
-  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.3.5.tgz#80e3db7ac8b76d98c45ca93334197eb6e2335158"
-  integrity sha512-MiwiPkYSA8NWttRKAXdU9h0TxP6HAc1fl7qZmMO/VQqQOND83G4nZLXd0kWILtAoT9cxtZgFqeb/MPYgEeXwsw==
+sequelize-typescript@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/sequelize-typescript/-/sequelize-typescript-1.1.0.tgz#d5c2945e7fbfe55a934917b27d84589858d79123"
+  integrity sha512-FAPEQPeAhIaFQNLAcf9Q2IWcqWhNcvn5OZZ7BzGB0CJMtImIsGg4E/EAb7huMmPaPwDArxJUWGqk1KurphTNRA==
   dependencies:
+    glob "7.1.2"
+
+sequelize@^5.21.5:
+  version "5.22.3"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-5.22.3.tgz#7e7a92ddd355d883c9eb11cdb106d874d0d2636f"
+  integrity sha512-+nxf4TzdrB+PRmoWhR05TP9ukLAurK7qtKcIFv5Vhxm5Z9v+d2PcTT6Ea3YAoIQVkZ47QlT9XWAIUevMT/3l8Q==
+  dependencies:
+    bluebird "^3.5.0"
+    cls-bluebird "^2.1.0"
     debug "^4.1.1"
     dottie "^2.0.0"
     inflection "1.12.0"
     lodash "^4.17.15"
-    moment "^2.26.0"
-    moment-timezone "^0.5.31"
+    moment "^2.24.0"
+    moment-timezone "^0.5.21"
     retry-as-promised "^3.2.0"
-    semver "^7.3.2"
-    sequelize-pool "^6.0.0"
+    semver "^6.3.0"
+    sequelize-pool "^2.3.0"
     toposort-class "^1.0.1"
-    uuid "^8.1.0"
+    uuid "^3.3.3"
     validator "^10.11.0"
-    wkx "^0.5.0"
+    wkx "^0.4.8"
 
 serialize-javascript@^2.1.2:
   version "2.1.2"
@@ -7743,6 +7802,11 @@ shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
+
+shimmer@^1.1.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/shimmer/-/shimmer-1.2.1.tgz#610859f7de327b587efebf501fb43117f9aff337"
+  integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==
 
 side-channel@^1.0.2:
   version "1.0.2"
@@ -8585,15 +8649,10 @@ util@^0.11.0:
   dependencies:
     inherits "2.0.3"
 
-uuid@^3.3.2:
+uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
-
-uuid@^8.1.0:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.1.tgz#2ba2e6ca000da60fce5a196954ab241131e05a31"
-  integrity sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
@@ -8758,10 +8817,10 @@ widest-line@^3.1.0:
   dependencies:
     string-width "^4.0.0"
 
-wkx@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/wkx/-/wkx-0.5.0.tgz#c6c37019acf40e517cc6b94657a25a3d4aa33e8c"
-  integrity sha512-Xng/d4Ichh8uN4l0FToV/258EjMGU9MGcA0HV2d9B/ZpZB3lqQm7nkOdZdm5GhKtLLhAE7PiVQwN4eN+2YJJUg==
+wkx@^0.4.8:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/wkx/-/wkx-0.4.8.tgz#a092cf088d112683fdc7182fd31493b2c5820003"
+  integrity sha512-ikPXMM9IR/gy/LwiOSqWlSL3X/J5uk9EO2hHNRXS41eTLXaUFEVw9fn/593jW/tE5tedNg8YjT5HkCa4FqQZyQ==
   dependencies:
     "@types/node" "*"
 

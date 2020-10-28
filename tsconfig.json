@@ -8,6 +8,7 @@
     "paths": {
       "@/*": ["./*"]
     },
+    "experimentalDecorators": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
