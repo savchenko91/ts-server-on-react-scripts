@@ -1,8 +1,12 @@
+import c from 'colors'
+
 import Koa from 'koa'
 
 import bodyParser from 'koa-bodyparser'
 
 import cors from '@koa/cors'
+
+import { isProvided } from '@/util/common'
 
 import db from './db'
 
@@ -10,11 +14,8 @@ import router from './route'
 
 import jwt from './middleware/jwt'
 
-if (!process.env.PORT_SERVER) {
-  throw Error(`env variable PORT_SERVER is not defined!`)
-}
-
-db.authenticate()
+const { PORT_SERVER } = process.env
+isProvided({ PORT_SERVER }, 'Env server')
 
 const app = new Koa()
 
@@ -28,4 +29,6 @@ app.use(router.routes())
 app.use(router.allowedMethods())
 
 // eslint-disable-next-line no-console
-app.listen(process.env.PORT_SERVER, () => console.log('server started'))
+db.authenticate(() => console.log(c.green('database connected')))
+// eslint-disable-next-line no-console
+app.listen(PORT_SERVER, () => console.log(c.green('server started')))

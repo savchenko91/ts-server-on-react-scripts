@@ -26,7 +26,7 @@ export interface HistoryItem {
 }
 
 @Table({ modelName: 'users' })
-export class User extends Model implements UserModel {
+export default class User extends Model implements UserModel {
   @Column({
     primaryKey: true,
     autoIncrement: true,

@@ -1,32 +1,32 @@
 import { Sequelize } from 'sequelize-typescript'
 
-import c from 'clsx'
+import { isProvided } from '@/util/common'
 
-import { User } from '../model/user'
+import models from './allModels'
 
 const { DB_NAME, DB_PASSWORD, DB_USERNAME, DB_HOST, DB_PORT } = process.env
 
-if (!DB_NAME || !DB_PASSWORD || !DB_USERNAME || !DB_HOST || !DB_PORT) {
-  throw Error(
-    `Provide env variables: ${c(
-      !DB_NAME && 'DB_NAME',
-      !DB_PASSWORD && 'DB_PASSWORD',
-      !DB_USERNAME && 'DB_USERNAME',
-      !DB_HOST && 'DB_HOST',
-      !DB_PORT && 'DB_PORT',
-    )}`,
-  )
-}
+isProvided(
+  {
+    DB_NAME,
+    DB_PASSWORD,
+    DB_USERNAME,
+    DB_HOST,
+    DB_PORT,
+  },
+  'Env database',
+)
 
 const sequelize = new Sequelize({
   database: DB_NAME,
   host: DB_HOST,
-  port: parseInt(DB_PORT, 10),
+  port: parseInt(DB_PORT || '3001', 10),
   username: DB_USERNAME,
   password: DB_PASSWORD,
   dialect: 'postgres',
   storage: ':memory:',
-  models: [User],
+  models,
+  logging: false,
 })
 
 function authenticate(onSuccess?: () => void): void {
