@@ -13,11 +13,14 @@ import db from './db'
 import router from './route'
 
 import jwt from './middleware/jwt'
+import errorHandler from './middleware/errorHandler'
 
 const { PORT_SERVER } = process.env
 isProvided({ PORT_SERVER }, 'Env server')
 
 const app = new Koa()
+
+app.use(errorHandler())
 
 app.use(bodyParser())
 
