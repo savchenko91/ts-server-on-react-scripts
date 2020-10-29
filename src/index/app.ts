@@ -28,7 +28,4 @@ app.use(router.routes())
 app.use(router.allowedMethods())
 
 // eslint-disable-next-line no-console
-// console.log(process.env.DB_NAME)
-
-// eslint-disable-next-line no-console
 app.listen(process.env.PORT_SERVER, () => console.log('server started'))

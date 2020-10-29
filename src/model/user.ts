@@ -3,7 +3,7 @@
 
 import { Column, CreatedAt, Model, Table, UpdatedAt, Unique, AllowNull, Validate, DataType } from 'sequelize-typescript'
 
-import { UserItemModel, UserModel } from '@/common/model'
+import { UserModel } from '@/common/model'
 
 import * as jwt from 'jsonwebtoken'
 
@@ -52,10 +52,6 @@ export class User extends Model implements UserModel {
   @Column(DataType.STRING)
   public password!: string
 
-  @AllowNull(false)
-  @Column(DataType.JSONB)
-  public users!: UserItem[]
-
   @CreatedAt
   @Column(DataType.DATE)
   public readonly createdAt!: Date
@@ -91,49 +87,4 @@ export class User extends Model implements UserModel {
       user: this,
     }
   }
-}
-
-@Table({ modelName: 'FAKE' })
-export class UserItem extends Model implements UserItemModel {
-  @Column({
-    primaryKey: true,
-    type: DataType.STRING,
-  })
-  public id!: string
-
-  @Validate({
-    is: {
-      args: /^[a-zа-яё ]{3,33}$/i,
-      msg:
-        'Username has invalid format%&Use only characters and spaces without numbers. Length must be 3-33 characters',
-    },
-  })
-  @AllowNull(false)
-  @Column({ type: DataType.NUMBER })
-  public username!: string
-
-  @Column({ type: DataType.STRING })
-  public electricityAccount?: string
-
-  @Column({ type: DataType.STRING })
-  public gasAccount?: string
-
-  @Column(DataType.JSONB)
-  public electricityHistory?: HistoryItem[]
-
-  @Column(DataType.JSONB)
-  public gasHistory?: HistoryItem[]
-
-  @Column(DataType.JSONB)
-  public waterHistory?: HistoryItem[]
-
-  @Validate({
-    is: {
-      args: /^[0-9a-zа-яё,. ]{3,33}$/i,
-      msg: 'Address has invalid format%&Use only characters and spaces without numbers. Length must be 3-33 characters',
-    },
-  })
-  @AllowNull(false)
-  @Column({ type: DataType.STRING })
-  public address!: string
 }
