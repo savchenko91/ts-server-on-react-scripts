@@ -31,7 +31,6 @@ app.use(jwt())
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-// eslint-disable-next-line no-console
-db.authenticate(() => console.log(c.green('database connected')))
-// eslint-disable-next-line no-console
-app.listen(PORT_SERVER, () => console.log(c.green('server started')))
+db.authenticate(() => console.warn(c.green('database connected')))
+
+app.listen(PORT_SERVER, () => console.warn(c.green('server started')))
