@@ -17,6 +17,8 @@ isProvided(
   'Env database',
 )
 
+// console.log('jhjhg')
+
 const sequelize = new Sequelize({
   database: DB_NAME,
   host: DB_HOST,
@@ -34,7 +36,6 @@ function authenticate(onSuccess?: () => void): void {
     .authenticate()
     .then(onSuccess)
     .catch((err): void => {
-      // eslint-disable-next-line no-console
       console.error('Unable to connect to database:', err)
     })
 }

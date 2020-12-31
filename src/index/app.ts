@@ -31,6 +31,6 @@ app.use(jwt())
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-db.authenticate(() => console.warn(c.green('database connected')))
+db.authenticate(() => console.warn(c.green('database c onnected')))
 
 app.listen(PORT_SERVER, () => console.warn(c.green('server started')))
